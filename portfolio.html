@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="folder/image_name" href="image/2003.png">
+    <title>My portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 77);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 27px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(71, 65, 228);
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 120px 60px;
+            align-items: center;
+
+
+        }
+
+        .firstsection>div {
+            width: auto;
+        }
+
+        .leftsection {
+            font-size: 2.5em;
+        }
+
+        .leftsection .btn {
+            background-color: rgb(107, 8, 227);
+            color: white;
+            padding: 12px;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .leftsection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftsection .btn:hover {
+            background-color: rgb(71, 65, 228);
+        }
+
+
+
+
+
+
+
+
+
+        .utility {
+            color: rgb(132, 70, 208);
+        }
+
+        #element {
+            color: rgb(132, 70, 208);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 2rem;
+        }
+
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(102, 58, 233);
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .text-gray {
+            color: rgb(55, 54, 56);
+        }
+
+        .secondSection .vertical {
+            height: 245px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .image-top {
+            position: relative;
+            height: 30px;
+            width: 30px;
+            top: -32px;
+            right: 16px;
+
+        }
+
+        .vertical-title {
+            margin: 24px 0;
+            margin-left: -40px;
+        }
+
+        .vertical-desc {
+            margin-top: -60px;
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 800px;
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            margin: 10px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-section p,
+        .footer-section ul,
+        .footer-section li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+
+        .section-about {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .section-second {
+            margin-top: -300px;
+        }
+
+        .services {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            margin-top: -190px;
+            color: grey;
+        }
+
+        .section-projects {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            margin-top: -330px;
+        }
+
+        .section-projects h2 {
+            margin: 15px 0;
+        }
+
+        .section-form {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            margin-top: -130px;
+            font-size: 20px;
+            color: rgb(250, 247, 247);
+        }
+
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .section-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        body {
+            background-color: rgb(1, 1, 27);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Pragati.</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection" id="home">
+            <div>
+                <img src="image/pragati.png" alt="image">
+            </div>
+            <div class="leftsection">Hi I am <span class="utility">Pragati</span>
+                <div>And i am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="pragati_Cv.pdf" download class="btn" style="text-decoration: none; color: white;">Download
+                        Resume</a>
+
+
+
+                    <button class="btn"><a href="https://github.com/pragati9998" target="_blank"
+                            style="color: white; text-decoration: none;">Visit
+                            Github</a></button>
+                </div>
+                <div class="rightsection">
+                </div>
+        </section>
+        <hr>
+        <div class="section-about" id="about">
+            <h1>About me</h1>
+            <p style="color: gray; margin-top: 15px;">As a tech enthusiast and problem-solver, I'm passionate about
+                crafting
+                digital
+                experiences that leave a
+                lasting
+                impression. I find joy in exploring technology's possibilities and turning ideas into reality through
+                clean and
+                efficient code. I'm always eager to embrace new challenges and constantly seek opportunities to push the
+                boundaries of
+                innovation. With a relentless drive for excellence, I stay updated with the latest trends, ensuring I
+                can deliver
+                remarkable results and create unique solutions that exceed expectations.</p>
+        </div>
+
+        <!-- services section -->
+
+        <section>
+            <div class="section-second" id="services">
+                <h1 style="max-width: 80vw; margin: auto; height: 80vh;">Services</h1>
+                <div class="services">
+                    <h3>Data Analysis</h3>
+                    <p>I offer data analysis services using tools such as Python, R, SQL, and visualization tools like
+                        Tableau
+                        and Power BI.
+                        I can help you uncover insights from your data through descriptive, predictive, and prescriptive
+                        analyses.</p>
+                    <div class="services">
+                        <h3>Data Engineering</h3>
+                        <p>I provide data engineering services, including building data pipelines, ETL processes, and
+                            data
+                            warehousing using
+                            tools like Hadoop, Spark, and Kafka. I ensure your data infrastructure is robust, scalable,
+                            and
+                            efficient.</p>
+                        <div class="services">
+                            <h3>DevOps</h3>
+                            <p>My DevOps services include CI/CD implementation, infrastructure as code, and automated
+                                testing using
+                                tools like
+                                Docker, Kubernetes, Jenkins, and cloud platforms like AWS and Azure. I help streamline
+                                your
+                                development
+                                and
+                                operations processes to achieve faster delivery and higher quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+
+        <div class="section-projects" id="projects">
+            <h1>Projects</h1>
+            <h2>Project 1
+
+            </h2>
+            <h3>Sentimental Analysis</h3>
+            <p style="color: gray;">sentiment analysis
+
+                "Sentiment analysis on data analysis involves using natural language processing techniques to
+                examine
+                text related to
+                data analysis, identifying the emotional tone as positive, negative, or neutral. This process
+                typically
+                includes
+                cleaning and tokenizing the text, followed by applying a sentiment analysis model such as VADER
+                or
+                TextBlob. The results
+                help determine the general sentiment expressed about data analysis topics, which can be useful
+                for
+                understanding public
+                opinion, improving communication strategies, and guiding decision-making in data-driven
+                projects."</p>
+        </div>
+        <!-- contact me section -->
+        <div class="section-form" id="contact">
+            <h1>Contact me</h1><br>
+            <form id="contactForm" action="/action_page.php" target="_blank">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Please enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+
+
+
+        <!-- Experience section -->
+
+        <section class="secondSection">
+            <span class="text-gray">what i have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="image/file.png" alt="image">
+                </div>
+                <div class="vertical-title">Technical support Associate
+                    <div>(2022-2023)</div>
+
+                    <div class="vertical-desc">
+                        <div>
+                            ❖ 𝐎𝐋𝐓 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧: De-registering/Registering ONU,
+                            configuring VLAN, Bridging,and PPPOE profiles, along with wireless settings.
+                        </div>
+                        <div>
+                            ❖ 𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠 𝐟𝐢𝐛𝐞𝐫 𝐨𝐩𝐭𝐢𝐜𝐚𝐥 𝐩𝐨𝐰𝐞𝐫𝐬: OLT,ONU, ONT, PON etc
+                        </div>
+                        <div>
+                            ❖ 𝐒𝐎𝐇𝐎 𝐑𝐨𝐮𝐭𝐞𝐫𝐬 𝐚𝐧𝐝 𝐀𝐏𝐬: Configuring and troubleshooting TP-link, MI,
+                            and
+                            other
+                            SOHO
+                            routers and access points. </div>
+
+                        <div>
+                            ❖ 𝐂𝐥𝐢𝐞𝐧𝐭 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐜𝐚𝐭𝐢𝐨𝐧: Effective communication with clients to
+                            resolve
+                            issues
+                            related to IPTV
+                            buffering,
+                            gaming latency, VLAN mismatch, VPN, and frequent internet disconnections </div>
+                    </div>
+                </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to providing the best data analysis services to help your business thrive.
+                        Contact
+                        us for more information.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contacts</h3>
+                    <p>Email: pragatichaudhary23@gmail.com</p>
+                    <p>Phone: 9805351685</p>
+                    <p>Address: 123 Patan Dhoka Road Lalitpur 44600 Nepal
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 www.pragatisportfolio.com.np All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Data Analyst', 'Data Engineer', 'Devops Practioner'],
+            typeSpeed: 50,
+        });
+
+
+        // Form validation
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var subject = document.getElementById('subject').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || subject === '' || message === '') {
+                alert('Please fill in all fields');
+                event.preventDefault(); // Prevent form submission if fields are empty
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
